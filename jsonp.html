@@ -4,16 +4,10 @@
 jsonp
   
   <script>
-    function OnLoad(){
-      console.log("OnLoad:", arguments);
-    }
     function OnCallback(data){
       console.log("OnCallback:", data.counter);
     }
   </script>
-      
-  <script onload="OnLoad" src="https://cloudfn.stream/js/counter?format=jsonp"></script>
-  
   <script src="https://cloudfn.stream/js/counter?callback=OnCallback"></script>
   
 </body>
