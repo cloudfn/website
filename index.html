@@ -1,12 +1,20 @@
 <html>
 
 <body>
-cloudfn, load jsonp data
+load json data
   
-  <script src="https://cloudfn.stream/js/counter?format=jsonp">
-  
-  console.log("jsonp:", jsonp);
-  
+  <script>
+    function OnLoad(){
+      console.log("OnLoad:", arguments);
+    }
+    function OnCallback(){
+      console.log("OnCallback:", arguments);
+    }
   </script>
+      
+  <script src="https://cloudfn.stream/js/counter?format=jsonp" onload="OnCounterLoaded"></script>
+  
+  <script src="https://cloudfn.stream/js/counter?callback=OnCallback"></script>
+  
 </body>
 </html>
