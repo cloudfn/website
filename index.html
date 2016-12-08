@@ -1,14 +1,14 @@
 <html>
 
 <body>
-load json data
+jsonp
   
   <script>
     function OnLoad(){
       console.log("OnLoad:", arguments);
     }
-    function OnCallback(result){
-      console.log("OnCallback:", result.counter);
+    function OnCallback(data){
+      console.log("OnCallback:", data.counter);
     }
   </script>
       
